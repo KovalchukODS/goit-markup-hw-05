@@ -493,25 +493,23 @@
         </div>
         <div class="footer-subscription">
           <p class="footer-title">Subscribe</p>
-          <div class="subscription-box">
-            <form action="post">
-              <label for="user-sub-email">
-                <input
-                  class="subscription-input"
-                  type="email"
-                  name="sub-email"
-                  id="user-sub-email"
-                  placeholder="E-mail"
-                />
-              </label>
-              <button type="submit" class="button subscription-button">
-                <span>Subscribe</span>
-                <svg class="subscription-svg" width="24" height="24">
-                  <use href="./images/icons.svg#icon-plane"></use>
-                </svg>
-              </button>
-            </form>
-          </div>
+          <form class="subscription-form" action="post">
+            <label for="user-sub-email">
+              <input
+                class="subscription-input"
+                type="email"
+                name="sub-email"
+                id="user-sub-email"
+                placeholder="E-mail"
+              />
+            </label>
+            <button type="submit" class="button subscription-button">
+              <span>Subscribe</span>
+              <svg class="subscription-svg" width="24" height="24">
+                <use href="./images/icons.svg#icon-plane"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
@@ -519,7 +517,7 @@
     <div class="backdrop is-open">
       <div class="modal">
         <button type="button" class="button modal-btn-close">
-          <svg class="" width="8" height="8">
+          <svg class="modal-close-svg" class="" width="8" height="8">
             <use href="./images/icons.svg#icon-cross"></use>
           </svg>
         </button>
@@ -581,7 +579,7 @@
           <div class="modal-form-agreement">
             <input
               type="checkbox"
-              name="user-agreed"
+              name="user-privacy"
               value="true"
               id="user-privacy"
               class="modal-form-agreement-checkbox visually-hidden"
