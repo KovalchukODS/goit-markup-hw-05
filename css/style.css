@@ -398,7 +398,7 @@ color: var(--Iris);
 	font-weight: 500;
 	color: var(--White);
 }
-.p-limited{
+.footer-title:nth-of-type(1){
 		max-width: 264px;
 }
 .socials-icons{
@@ -420,7 +420,7 @@ color: var(--Iris);
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: var(--NavyBlueModal);
+	background-color: rgba(46, 47, 66, 0.4);
 
 	opacity: 0;
 	visibility: hidden;
@@ -448,34 +448,47 @@ color: var(--Iris);
 	line-height: 1.17;
 	letter-spacing: 0.04em;
 	color: var(--LightSlate);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	transform: translate(-50%, -50%);
 }
 
 .modal-btn-close {
 	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
 	top: 24px;
 	right: 24px;
 	width: 24px;
 	height: 24px;
 	border-radius: 50%;
-	border:1px solid var(--LightSlate);
+	border: 1px solid rgba(0, 0, 0, 0.1); 
 	background-color: var(--CornFlower);
-	transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn-close:focus, .modal-btn-close:hover{
 	fill: var(--White);
 	background-color: var(--Ocean);
+	border: none;
 }
 
-.modal-form-title {
+.modal-form-title{
 	margin-bottom: 16px;
+	font-weight: 500; 
+	font-size: 16px;
+	line-height: 1.5;
 	text-align: center;
+	letter-spacing: 0.02em;
 	color: var(--NavyBlue);
 }
 .modal-form {
 }
 .modal-form-box{
 	margin-bottom: 8px;
+}
+.modal-form-box:nth-of-type(4){
+	margin-bottom: 16px;
 }
 .modal-form-label {
 	display: block;
@@ -489,20 +502,23 @@ color: var(--Iris);
 	width: 100%;
 	height: 40px;
 	padding: 11px 12px 11px 38px;
-	border: 1px solid var(--LightSlate);
+	border: 1px solid rgba(46, 47, 66, 0.4);
 	border-radius: 4px;
+	background-color: transparent;
 	outline: transparent;
 	transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-input:focus{
-	border-color: var(--Ocean);
+	border-color: var(--Iris);
 }
 
 .modal-form-svg{
 	fill: black;
-	position: absolute;
-	top: 8px;
 	left: 16px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .modal-form-textarea{
 	resize: none;
@@ -511,11 +527,16 @@ color: var(--Iris);
 	border-radius: 4px;
 	width: 100%;
 	height: 120px;
-	border: 1px solid var(--LightSlate);
+	border: 1px solid rgba(46, 47, 66, 0.4);
+	line-height: 1.17; 
+	letter-spacing: 0.04em;
+	color: rgba(46, 47, 66, 0.4);
+	background-color: transparent;
+	outline: transparent;
 	transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-textarea:focus{
-	border-color: var(--Ocean);
+	border-color: var(--Iris);
 }
 .modal-form-textarea::placeholder{
 	color: var(--LightSlate);
@@ -524,19 +545,24 @@ color: var(--Iris);
 	margin-bottom: 24px;
 }
 .modal-form-agreement-checkbox:checked + .modal-form-agreement-label > .modal-form-custom-checkbox{
+	 border: none;
+	 fill: var(--Iris);
 	background-color: var(--Ocean);
 	border-color: var(--Ocean);
 }
 .modal-form-custom-checkbox{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	margin-right: 8px;
 	width: 16px;
 	height: 16px;
 	border-radius: 2px;
-	border: 1px solid var(--LightSlate);
+	border: 1px solid rgba(46, 47, 66, 0.4);
+	fill: transparent;
 	cursor: pointer;
 	text-align: center;
-	transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-	background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-agreement-label{
   display: flex;
@@ -563,10 +589,12 @@ color: var(--Iris);
 	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 	background: var(--Iris);
 	font-weight: 500;
+	font-size: 16px;
+	 line-height: 1.5;
 	letter-spacing: 0.04em;
 	text-align: center;
 	color: var(--White);
-	transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn-submit:hover, .modal-btn-submit:focus{
